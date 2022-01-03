@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MedVidQA 2022</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- style -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/datatables.min.css">
+    <link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4-4.1.1/jszip-2.5.0/dt-1.10.20/b-1.6.1/b-html5-1.6.1/b-print-1.6.1/cr-1.5.2/r-2.2.3/datatables.min.css"/>
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- javascript libraries -->
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="js/jquery.latest.min.js"></script>
+    <script type="text/javascript" src="js/jquery.csv.min.js"></script>
+    <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+    <script type="text/javascript" src="js/datatables.min.js"></script>
+
+    <!-- datatables deps -->
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs4-4.1.1/jszip-2.5.0/dt-1.10.20/b-1.6.1/b-html5-1.6.1/b-print-1.6.1/cr-1.5.2/r-2.2.3/datatables.min.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156896378-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-156896378-1');
+    </script>
+
+    <!-- Simple js to show/hide a div element -->
+    <script>
+        function myFunction(el) {
+            var x = document.getElementById(el);
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+
+
+    
+</head>
+
+<body id="_index">
+
+<nav>
+<section style="text-align: right;">
+    <span class="home">
+        <a href="index.html"><strong>Home</strong></a>
+        <a href="#idates"><strong>Important Dates</strong></a>
+        <a href="#tasks"><strong>Tasks</strong></a>
+        <a href="#datasets"><strong>Datasets</strong></a>
+        <a href="#eval"><strong>Evaluation</strong></a>
+  <a href="#organizers"><strong>Organizers</strong></a>
+    </span>
+</section>
+</nav>
+
+    <div style="height: 325px; width: 100%; overflow:hidden;   position: relative; text-align: center;  font-size: 180%;  
+  color: Black;">
+        <img src="img/background.png" style="width: 100%; height: 325px;"/>
+         <div class="centered">
+         <h1 style="font-size:2vw">Shared Task on Medical Video Question Answering</h1>
+        <h1 style="font-size:3vw">MedVidQA 2022</h1>
+
+     </div>
+    </div>
+
+
+
+<main>
+    <section style="margin-top: 1cm">
+<h2>Introduction</h2>
+
+
+<div>
+<p>One of the key goals of artificial intelligence (AI) is the development of a multimodal system that facilitates communication with the visual world (image, video) using a natural language query. In recent years, significant progress has been achieved due to the introduction of large-scale language-vision datasets and the development of efficient deep neural techniques that bridge the gap between language and visual understanding. With increasing interest in AI to support clinical decision-making and improve patient engagement, there is a need to explore such challenges and develop efficient algorithms for medical language-video understanding. This shared task introduces a new challenge to foster research toward designing systems that can understand medical videos and provide visual answers to natural language questions. 
+</p>
+</div>
+
+<div>
+<p>Consider a medical question, “<i>How to place a tourniquet in case of fingertip avulsions? ”</i>, the textual answer to this question will be hard to understand and act upon without visual aid. In order to provide visual aid, first, we need to identify the relevant video, which is medical and instructional in nature. Once we find a relevant video, it is often the case that the entire video can not be considered as the answer to the given question. Instead, we want to refer to a particular temporal segment, or moment, from the video, where the answer is being shown, or the explanation is illustrated in the video. We believe medical videos may provide the best possible answers to many first aids, medical emergency, and medical education questions. 
+</p>
+
+</div>
+</section>
+<section id="news" style="margin-bottom: 1cm;">
+<h2>News</h2>
+<ul>
+<li>January 3, 2022: Introducing the MedVidQA 2022 challenge.</li>
+</ul>
+</section>
+
+<section id="idates" style="margin-bottom: 1cm;">
+<h2>Important Dates</h2>
+<ul>
+<li><strong> First call for participation:</strong> <span style="font-weight: bold; color: red;">January 3, 2022</span></li>
+<li><strong> Release of the training and validation datasets on AIcrowd:</strong> <span style="font-weight: bold; color: red;">January 6, 2022</span></li>
+<li><strong> Release of the test sets:</strong> <span style="font-weight: bold; color: red;">February 21, 2022</span></li>
+<li><strong>Run submission opens on AIcrowd:</strong> <span style="font-weight: bold; color: red;">February 21, 2022</span></li>
+<li><strong>Run submission deadline:</strong> <span style="font-weight: bold; color: red;">February 25, 2022</span></li>
+<li><strong>Release of the official results:</strong> <span style="font-weight: bold; color: red;">March 2, 2022</span></li>
+<li><strong>System Description Paper due:</strong> <span style="font-weight: bold; color: red;">March 11, 2022</span></li>
+
+<li><strong>Notification of acceptance:</strong> <span style="font-weight: bold; color: red;">March 25, 2022</span></li>
+<li><strong>Camera-ready papers due:</strong> <span style="font-weight: bold; color: red;">April 4, 2022</span></li>
+<li><strong>BioNLP Workshop @ACL22:</strong><span style="font-weight: bold; color: red;">May 26, 2022</span></li>
+</ul>
+</section>
+
+<section id="tasks" style="margin-bottom: 1cm;">
+<h2>Tasks</h2>
+In this shared task, we introduce the following tasks:
+<h3>Task 1: Medical Video Classification (MVC)</h3>
+Given an input video, the task is to
+categorize the video into one of the following classes:
+<ul>
+<li>
+<div><p>
+    <strong> Medical Instructional:</strong> 
+    An instructional medical video should clearly demonstrate a medical procedure providing enough details to reproduce the procedure and achieve the    desired results. The accompanying narrative should be to the point and should clearly describe the steps in the visual content. Suppose a valid medical or health-related question is aligned with an instructional medical video. In that case, it should explain/answer the medical question with a demonstration, or should be a tutorial/educational video where someone (e.g., a doctor or a medical professional) demonstrates a procedure related to the medical question, or should be a how-to video about the medical or health-related question.</p></div>
+</li>
+<li>
+<div><p>
+    <strong> Medical Non-instructional:</strong>
+     A medical video on a discussion of medical-related topics without any visual answer to any medical or health-related question.</p></div>
+</li>
+<li><strong>Non-medical:</strong>
+     A video can be categorized as non-medical if the video is neither medical instructional nor medical non-instructional.
+</li>
+</ul>
+
+
+
+<table style="width:100%">
+<thead>
+  <tr>
+    <th> 
+        <iframe width="100%" height="315"
+src="https://www.youtube.com/embed/OaSovqEimyA">
+</iframe></th>
+    <th ><iframe width="100%" height="315"
+src="https://www.youtube.com/embed/YqHv_8rKkeE">
+</iframe></th>
+    <th><iframe width="100%" height="315"
+src="https://www.youtube.com/embed/hE63VMlLyB8">
+</iframe></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td style="text-align:center;"><strong>Medical Instructional</strong></td>
+    <td style="text-align:center;"><strong>Medical Non-Instructional</strong></td>
+    <td style="text-align:center;"><strong>Medical Instructional</strong></td>
+  </tr>
+</tbody>
+</table>
+<div>
+<center><h5>Sample videos from each video category</h5></center>
+</div>
+<h3>Task 2: Medical Visual Answer Localization (MVAL)</h3>
+<div><p>
+Given a medical or healthrelated question and a video, the task aims to locate the temporal segments (start and end timestamps) in the video where the answer to the medical question is being shown, or the explanation is illustrated in the video. A similar task in the literature is established as natural language frame localization [<a href="#ref1">1</a>, <a href="#ref2">2</a>], where the task is to find the video segment that has equivalent semantics as to the natural language. In contrast, the proposed task seeks to find a video segment with a visual answer to the natural language query. The proposed MAVL task can be considered as finding a series of “medical instructional activity-based frame localization” where a potential solution first searches for all medical instructional activity for a given medical question and then localizes a particular activity which is aligned to medical or health-related question in an untrimmed medical-instructional video.</p></div>
+
+  <img src="img/example.png" style="width: 100%;object-fit: cover;"/>
+  <div>
+<center><h5>Sample question and its visual answer from the video. </h5></center>
+</div>
+</section>
+
+
+<section id="datasets" style="margin-bottom: 1cm;">
+<h2>Datasets</h2>
+<h5>MVC Dataset</h5>
+<ul>
+<li>
+    <strong>Training Dataset:</strong> 
+    The training dataset consists of − − −− videos annotated into one the medical video classes from HowTo100M<a href="#ref2">[2]</a> and YouTube8M<a href="#ref3">[3]</a> datasets.
+</li>
+<li>
+
+    <strong> Validation and Test Dataset:</strong>
+     The validation and test datasets consists of − − −− and − − −− videos respectively. These videos are also annotated into one the medical video classes from YouTube8M and HowTo100M datasets.
+</li>
+
+</ul>
+
+<h5>MVAL Dataset</h5>
+<ul>
+<li>
+    <strong>Training Dataset:</strong> 
+    The training dataset consists of − − −− question and answer timestamps which are formulated from −− trusted medical instructional videos from various YouTube channels.
+
+</li>
+<li>
+    <strong> Validation and Test Dataset:</strong>
+     The validation and test dataset contains − − −−, ---- question and answer timestamps respectively from reliable medical instructional YouTube videos.
+</li>
+
+</ul>
+
+</section>
+
+
+<section id="eval" style="margin-bottom: 1cm;">
+<h2>Evaluation Metrics</h2>
+<h5>MVC Evaluation</h5>
+The evaluation metric will be (a) F1 Score on Medical Instructional Class,
+and (b) Average macro-level F1 score across all the classes.
+
+<h5>MVAL Evaluation</h5>
+<div><p>
+We will evaluate the results using (a) Intersection over Union (IoU), and (b) mIoU which is the average IoU over all testing sample. Following <a href="#ref4">[4]</a>, we will use “R@n, IoU = µ”, which denotes the percentage of questions for which, out of the top-n retrieved temporal segments, at least one predicted temporal segment intersects the ground truth
+temporal segment for longer than µ.</p></div>
+</section>
+
+<section id="organizers"></section>
+<h2>Organizers</h2>
+<p>
+<a href="https://deepaknlp.github.io/">
+<div class="item">
+    <img class="headshot" src="img/organizers/deepak.jpeg"/>
+    <span class="name">Deepak Gupta</span>
+    <span class="affiliation">NLM, NIH</span>
+</div>
+</a>
+<a href="https://www.nlm.nih.gov/research/researchstaff/DemnerFushmanDina.html">
+<div class="item">
+    <img class="headshot" src="img/organizers/DinaDemnerFushman.jpg"/>
+    <span class="name">Dina Demner-Fushman</span>
+    <span class="affiliation">NLM, NIH</span>
+</div>
+</a>
+
+</p>
+
+
+<h2>References</h2>
+
+<div id=ref1>[1] <i>Lisa Anne Hendricks, Oliver Wang, Eli Shechtman, Josef Sivic, Trevor Darrell, and Bryan Russell. Localizing moments in video with natural language. In Proceedings of the IEEE international conference on computer vision, pages 5803–5812, 2017.</i></div>
+<div id=ref1>[2] <i>Antoine Miech, Dimitri Zhukov, Jean-Baptiste Alayrac, Makarand Tapaswi, Ivan Laptev, and Josef Sivic. Howto100m: Learning a text-video embedding by watching hundred million narrated video clips. In Proceedings of the IEEE/CVF International Conference on Computer
+Vision, pages 2630–2640, 2019. </i></div>
+<div id=ref3>[3] <i>Sami Abu-El-Haija, Nisarg Kothari, Joonseok Lee, Paul Natsev, George Toderici, Balakrishnan Varadarajan, and Sudheendra Vijayanarasimhan. Youtube-8m: A large-scale video classification benchmark. arXiv preprint arXiv:1609.08675, 2016. </i></div>
+<div id=ref3>[4] <i>Yitian Yuan, Tao Mei, and Wenwu Zhu. To find where you talk: Temporal sentence localization in video with attention based location regression. In Proceedings of the AAAI Conference on Artificial Intelligence, volume 33, pages 9159–9166, 2019.</i></div>
+
+
+</main>
+
+<footer>
+<section>
+<p>&copy; MedVidQA 2022 Organizers; Credit: <a href="https://www.cs.ubc.ca/research/image-matching-challenge/current/" style="color: black;">Image Matching Challenge 2021</a> </p>
+<p>
+    <a href="mailto: medvidqa2022@googlegroups.com">E-mail</a>
+</p>
+</section>
+</footer>
+
+</body>
+</html>

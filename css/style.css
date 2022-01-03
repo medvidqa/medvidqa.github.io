@@ -1,0 +1,170 @@
+
+/* General */
+body {
+    margin: 0;
+    line-height: 1.5em;
+    color: #424242;
+    font-family: 'roboto', helvetica, arial, sans-serif;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2em;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+a:link, a:visited {
+    color: blue;
+    text-decoration: none
+}
+
+a:hover, a:active {
+    color: #3f51b5;
+    text-decoration: underline
+}
+
+div p{
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.container {
+      position: relative;
+
+    width: 100%;
+  text-align: center;
+  color: white;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* Single column layout */
+nav section, header section, main, footer section {
+    max-width: 85em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 0.3em;
+}
+
+
+main { padding-top: 1em; }
+
+/* Navigation panel */
+nav {
+    background: #37474f;
+    border-bottom: thin solid #111111;
+    line-height: 3.5em;
+}
+
+nav a {
+    margin-right: 1em;
+}
+
+nav a:link, nav a:visited {
+    color: #b0bec5;
+}
+
+nav a:hover, nav a:active {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 600px) {
+    nav .links {
+        float: right;
+    }
+}
+
+
+
+/* Footer */
+footer {
+    background: #f0f0f0;
+    border-top: thin solid #e0e0e0;
+    margin-top: 2em;
+    padding: 1em 0;
+    box-shadow: 0 100vh 0 100vh #f0f0f0;
+    text-align: center;
+}
+
+footer section p {
+    font-size: 0.8em;
+}
+
+footer a {
+    margin-right: 1em;
+}
+
+footer a:last-child {
+    margin-right: 0;
+}
+
+
+/* Posts */
+article {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+article h2 a:link, article h2 a:visited,
+article h1 a:link, article h1 a:visited,
+.more:link, .more:visited {
+    color: #333333;
+}
+
+article h2 a:hover, article h2 a:active,
+article h1 a:hover, article h1 a:active,
+.more:hover, .more:active {
+    color: #777777;
+}
+
+p.meta {
+    margin-top: 0;
+    font-size: 0.8em;
+    color: #777777;
+    font-style: italic;
+}
+
+p.summary {
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+}
+
+div .more {
+    margin-top: 0;
+    font-weight: bold;
+}
+
+
+
+pre code {
+  background-color: #eceff1;
+  border: none;
+  display: block;
+  padding: 0.5em;
+}
+
+/* shots */
+div.item {
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    width: 200px;
+}
+.headshot {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 100%;
+}
+.name {
+    font-weight: bold;
+    display: block;
+}
+.affiliation {
+    display: block;
+}
