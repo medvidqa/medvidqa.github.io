@@ -87,7 +87,7 @@
 </div>
 
 <div>
-<p>Consider a medical question, “<i>How to place a tourniquet in case of fingertip avulsions? ”</i>, the textual answer to this question will be hard to understand and act upon without visual aid. In order to provide visual aid, first, we need to identify the relevant video, which is medical and instructional in nature. Once we find a relevant video, it is often the case that the entire video can not be considered as the answer to the given question. Instead, we want to refer to a particular temporal segment, or moment, from the video, where the answer is being shown, or the explanation is illustrated in the video. We believe medical videos may provide the best possible answers to many first aids, medical emergency, and medical education questions. 
+<p>Consider a medical question, “<i>How to place a tourniquet in case of fingertip avulsions? ”</i>, the textual answer to this question will be hard to understand and act upon without visual aid. In order to provide visual aid, first, we need to identify the relevant video, which is medical and instructional in nature. Once we find a relevant video, it is often the case that the entire video can not be considered as the answer to the given question. Instead, we want to refer to a particular temporal segment, or moment, from the video, where the answer is being shown or the explanation is illustrated in the video. We believe medical videos may provide the best possible answers to many first aids, medical emergency, and medical education questions. 
 </p>
 
 </div>
@@ -126,7 +126,7 @@ categorize the video into one of the following classes:
 <li>
 <div><p>
     <strong> Medical Instructional:</strong> 
-    An instructional medical video should clearly demonstrate a medical procedure providing enough details to reproduce the procedure and achieve the    desired results. The accompanying narrative should be to the point and should clearly describe the steps in the visual content. Suppose a valid medical or health-related question is aligned with an instructional medical video. In that case, it should explain/answer the medical question with a demonstration, or should be a tutorial/educational video where someone (e.g., a doctor or a medical professional) demonstrates a procedure related to the medical question, or should be a how-to video about the medical or health-related question.</p></div>
+    An instructional medical video should clearly demonstrate a medical procedure providing enough details to reproduce the procedure and achieve the desired results. The accompanying narrative should be to the point and should clearly describe the steps in the visual content. Suppose a valid medical or health-related question is aligned with an instructional medical video. In that case, it should explain/answer the medical question with a demonstration or should be a tutorial/educational video where someone (e.g., a doctor or a medical professional) demonstrates a procedure related to the medical question or should be a how-to video about the medical or health-related question.</p></div>
 </li>
 <li>
 <div><p>
@@ -168,7 +168,7 @@ src="https://www.youtube.com/embed/hE63VMlLyB8">
 </div>
 <h3>Task 2: Medical Visual Answer Localization (MVAL)</h3>
 <div><p>
-Given a medical or healthrelated question and a video, the task aims to locate the temporal segments (start and end timestamps) in the video where the answer to the medical question is being shown, or the explanation is illustrated in the video. A similar task in the literature is established as natural language frame localization [<a href="#ref1">1</a>, <a href="#ref2">2</a>], where the task is to find the video segment that has equivalent semantics as to the natural language. In contrast, the proposed task seeks to find a video segment with a visual answer to the natural language query. The proposed MVAL task can be considered as finding a series of “<i>medical instructional activity-based frame localization</i>” where a potential solution first searches for all medical instructional activity for a given medical question and then localizes a particular activity which is aligned to medical or health-related question in an untrimmed medical-instructional video.</p></div>
+Given a medical or health-related question and a video, the task aims to locate the temporal segments (start and end timestamps) in the video where the answer to the medical question is being shown, or the explanation is illustrated in the video. A similar task in the literature is established as natural language frame localization [<a href="#ref1">1</a>, <a href="#ref2">2</a>], where the task is to find the video segment that has equivalent semantics as to the natural language. In contrast, the proposed task seeks to find a video segment with a visual answer to the natural language query. The proposed MVAL task can be considered as finding a series of “<i>medical instructional activity-based frame localization</i>” where a potential solution first searches for all medical instructional activity for a given medical question and then localizes a particular activity which is aligned to medical or health-related question in an untrimmed medical-instructional video.</p></div>
 
   <img src="img/example.png" style="width: 100%;object-fit: cover;"/>
   <div>
@@ -188,7 +188,7 @@ Given a medical or healthrelated question and a video, the task aims to locate t
 <li>
 
     <strong> Validation Dataset:</strong>
-     The validation dataset consists of − − −− videos. These videos are also annotated into one the medical video classes from YouTube8M and HowTo100M datasets.
+     The validation dataset consists of − − −− videos. These videos are also annotated into one of the medical video classes from YouTube8M and HowTo100M datasets.
 </li>
 
 </ul>
@@ -202,7 +202,7 @@ Given a medical or healthrelated question and a video, the task aims to locate t
 </li>
 <li>
     <strong> Validation Dataset:</strong>
-     The validation and test dataset contain 161 questions and answer timestamps created from 50 medical instructional YouTube videos.
+     The validation and test dataset contains 161 questions and answers timestamps created from 50 medical instructional videos.
 </li>
 
 </ul>
