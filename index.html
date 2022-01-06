@@ -96,15 +96,15 @@
 <section id="news" style="margin-bottom: 1cm;">
 <h2>News</h2>
 <ul>
-<li>January 3, 2022: Introducing the MedVidQA 2022 challenge.</li>
+<li>January 10, 2022: Introducing the MedVidQA 2022 challenge.</li>
 </ul>
 </section>
 
 <section id="idates" style="margin-bottom: 1cm;">
 <h2>Important Dates</h2>
 <ul>
-<li><strong> First call for participation:</strong> <span style="font-weight: bold; color: red;">January 3, 2022</span></li>
-<li><strong> Release of the training and validation datasets on AIcrowd:</strong> <span style="font-weight: bold; color: red;">January 6, 2022</span></li>
+<li><strong> First call for participation:</strong> <span style="font-weight: bold; color: red;">January 10, 2022</span></li>
+<li><strong> Release of the training and validation datasets:</strong> <span style="font-weight: bold; color: red;">January 10, 2022</span></li>
 <li><strong> Release of the test sets:</strong> <span style="font-weight: bold; color: red;">February 21, 2022</span></li>
 <li><strong>Run submission opens on AIcrowd:</strong> <span style="font-weight: bold; color: red;">February 21, 2022</span></li>
 <li><strong>Run submission deadline:</strong> <span style="font-weight: bold; color: red;">February 25, 2022</span></li>
@@ -169,7 +169,7 @@ src="https://www.youtube.com/embed/hE63VMlLyB8">
 </div>
 <h3>Task 2: Medical Visual Answer Localization (MVAL)</h3>
 <div><p>
-Given a medical or healthrelated question and a video, the task aims to locate the temporal segments (start and end timestamps) in the video where the answer to the medical question is being shown, or the explanation is illustrated in the video. A similar task in the literature is established as natural language frame localization [<a href="#ref1">1</a>, <a href="#ref2">2</a>], where the task is to find the video segment that has equivalent semantics as to the natural language. In contrast, the proposed task seeks to find a video segment with a visual answer to the natural language query. The proposed MAVL task can be considered as finding a series of “medical instructional activity-based frame localization” where a potential solution first searches for all medical instructional activity for a given medical question and then localizes a particular activity which is aligned to medical or health-related question in an untrimmed medical-instructional video.</p></div>
+Given a medical or healthrelated question and a video, the task aims to locate the temporal segments (start and end timestamps) in the video where the answer to the medical question is being shown, or the explanation is illustrated in the video. A similar task in the literature is established as natural language frame localization [<a href="#ref1">1</a>, <a href="#ref2">2</a>], where the task is to find the video segment that has equivalent semantics as to the natural language. In contrast, the proposed task seeks to find a video segment with a visual answer to the natural language query. The proposed MVAL task can be considered as finding a series of “<i>medical instructional activity-based frame localization</i>” where a potential solution first searches for all medical instructional activity for a given medical question and then localizes a particular activity which is aligned to medical or health-related question in an untrimmed medical-instructional video.</p></div>
 
   <img src="img/example.png" style="width: 100%;object-fit: cover;"/>
   <div>
@@ -184,12 +184,12 @@ Given a medical or healthrelated question and a video, the task aims to locate t
 <ul>
 <li>
     <strong>Training Dataset:</strong> 
-    The training dataset consists of − − −− videos annotated into one the medical video classes from HowTo100M<a href="#ref2">[2]</a> and YouTube8M<a href="#ref3">[3]</a> datasets.
+    The training dataset consists of --- videos annotated into one the medical video classes from HowTo100M<a href="#ref2">[2]</a> and YouTube8M<a href="#ref3">[3]</a> datasets.
 </li>
 <li>
 
-    <strong> Validation and Test Dataset:</strong>
-     The validation and test datasets consists of − − −− and − − −− videos respectively. These videos are also annotated into one the medical video classes from YouTube8M and HowTo100M datasets.
+    <strong> Validation Dataset:</strong>
+     The validation dataset consists of − − −− videos. These videos are also annotated into one the medical video classes from YouTube8M and HowTo100M datasets.
 </li>
 
 </ul>
@@ -198,12 +198,12 @@ Given a medical or healthrelated question and a video, the task aims to locate t
 <ul>
 <li>
     <strong>Training Dataset:</strong> 
-    The training dataset consists of − − −− question and answer timestamps which are formulated from −− trusted medical instructional videos from various YouTube channels.
+    The training dataset consists of 2351 question and answer timestamps which are formulated from 702 trusted medical instructional videos from various YouTube channels.
 
 </li>
 <li>
-    <strong> Validation and Test Dataset:</strong>
-     The validation and test dataset contains − − −−, ---- question and answer timestamps respectively from reliable medical instructional YouTube videos.
+    <strong> Validation Dataset:</strong>
+     The validation and test dataset contain 161 questions and answer timestamps created from 50 medical instructional YouTube videos.
 </li>
 
 </ul>
@@ -214,12 +214,12 @@ Given a medical or healthrelated question and a video, the task aims to locate t
 <section id="eval" style="margin-bottom: 1cm;">
 <h2>Evaluation Metrics</h2>
 <h5>MVC Evaluation</h5>
-The evaluation metric will be (a) F1 Score on Medical Instructional Class,
-and (b) Average macro-level F1 score across all the classes.
+The evaluation metric will be <b>(a)</b> F1 Score on Medical Instructional Class,
+and <b>(b)</b> Average macro-level F1 score across all the classes.
 
 <h5>MVAL Evaluation</h5>
 <div><p>
-We will evaluate the results using (a) Intersection over Union (IoU), and (b) mIoU which is the average IoU over all testing sample. Following <a href="#ref4">[4]</a>, we will use “R@n, IoU = µ”, which denotes the percentage of questions for which, out of the top-n retrieved temporal segments, at least one predicted temporal segment intersects the ground truth
+We will evaluate the results using <b>(a)</b> Intersection over Union (IoU), and <b>(b)</b> mIoU which is the average IoU over all testing sample. Following <a href="#ref4">[4]</a>, we will use “R@n, IoU = µ”, which denotes the percentage of questions for which, out of the top-n retrieved temporal segments, at least one predicted temporal segment intersects the ground truth
 temporal segment for longer than µ.</p></div>
 </section>
 
@@ -228,7 +228,7 @@ temporal segment for longer than µ.</p></div>
 <p>
 <a href="https://deepaknlp.github.io/">
 <div class="item">
-    <img class="headshot" src="img/organizers/deepak.jpeg"/>
+    <img class="headshot" src="img/organizers/deepak.png"/>
     <span class="name">Deepak Gupta</span>
     <span class="affiliation">NLM, NIH</span>
 </div>
