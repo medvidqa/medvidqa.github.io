@@ -44,10 +44,10 @@ div p{
 }
 /* Single column layout */
 nav section, header section, main, footer section {
-    max-width: 85em;
+    max-width: 75em;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 0.3em;
+    padding: 0 3em;
 }
 
 
