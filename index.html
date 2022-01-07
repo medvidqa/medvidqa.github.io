@@ -112,16 +112,17 @@
 
 <li><strong>Notification of acceptance:</strong> <span style="font-weight: bold; color: red;">March 25, 2022</span></li>
 <li><strong>Camera-ready papers due:</strong> <span style="font-weight: bold; color: red;">April 4, 2022</span></li>
-<li><strong>BioNLP workshop @ACL22:</strong><span style="font-weight: bold; color: red;">May 26, 2022</span></li>
+<li><strong>BioNLP workshop @ACL22: </strong><span style="font-weight: bold; color: red;">May 26, 2022</span></li>
 </ul>
 </section>
 
 <section id="tasks" style="margin-bottom: 1cm;">
 <h2>Tasks</h2>
-In this shared task, we introduce the following tasks:
+
 <h3>Task 1: Medical Video Classification (MVC)</h3>
 Given an input video, the task is to
 categorize the video into one of the following classes:
+<br>
 <ul>
 <li>
 <div><p>
@@ -168,7 +169,7 @@ src="https://www.youtube.com/embed/hE63VMlLyB8">
 </div>
 <h3>Task 2: Medical Visual Answer Localization (MVAL)</h3>
 <div><p>
-Given a medical or health-related question and a video, the task aims to locate the temporal segments (start and end timestamps) in the video where the answer to the medical question is being shown, or the explanation is illustrated in the video. A similar task in the literature is established as natural language frame localization [<a href="#ref1">1</a>, <a href="#ref2">2</a>], where the task is to find the video segment that has equivalent semantics as to the natural language. In contrast, the proposed task seeks to find a video segment with a visual answer to the natural language query. The proposed MVAL task can be considered as finding a series of “<i>medical instructional activity-based frame localization</i>” where a potential solution first searches for all medical instructional activity for a given medical question and then localizes a particular activity which is aligned to medical or health-related question in an untrimmed medical-instructional video.</p></div>
+Given a medical or health-related question and a video, the task aims to locate the temporal segments (start and end timestamps) in the video where the answer to the medical question is being shown, or the explanation is illustrated in the video. This task seeks to find a video segment with a visual answer to the natural language question. The MVAL task can be considered as finding a series of “<i>medical instructional activity-based frame localization</i>” where a potential solution first searches for all medical instructional activity for a given medical question and then localizes a particular activity which is aligned to given medical or health-related question in an untrimmed medical-instructional video.</p></div>
 
   <img src="img/example.png" style="width: 100%;object-fit: cover;"/>
   <div>
@@ -183,7 +184,7 @@ Given a medical or health-related question and a video, the task aims to locate 
 <ul>
 <li>
     <strong>Training Dataset:</strong> 
-    The training dataset consists of --- videos annotated into one the medical video classes from HowTo100M <a href="#ref2">[2]</a> and YouTube8M <a href="#ref3">[3]</a> datasets.
+    The training dataset consists of --- videos annotated into one the medical video classes from HowTo100M <a href="#ref1">[1]</a> and YouTube8M <a href="#ref2">[2]</a> datasets.
 </li>
 <li>
 
@@ -218,7 +219,7 @@ and <b>(b)</b> Average macro-level F1 score across all the classes.
 
 <h5>MVAL Evaluation</h5>
 <div><p>
-We will evaluate the results using <b>(a)</b> Intersection over Union (IoU), and <b>(b)</b> mIoU which is the average IoU over all testing sample. Following <a href="#ref4">[4]</a>, we will use “R@n, IoU = µ”, which denotes the percentage of questions for which, out of the top-n retrieved temporal segments, at least one predicted temporal segment intersects the ground truth
+We will evaluate the results using <b>(a)</b> Intersection over Union (IoU), and <b>(b)</b> mIoU which is the average IoU over all testing sample. Following <a href="#ref3">[3]</a>, we will use “R@n, IoU = µ”, which denotes the percentage of questions for which, out of the top-n retrieved temporal segments, at least one predicted temporal segment intersects the ground truth
 temporal segment for longer than µ.</p></div>
 </section>
 
@@ -244,12 +245,10 @@ temporal segment for longer than µ.</p></div>
 
 
 <h2>References</h2>
-
-<div id=ref1>[1] <i>Lisa Anne Hendricks, Oliver Wang, Eli Shechtman, Josef Sivic, Trevor Darrell, and Bryan Russell. Localizing moments in video with natural language. In Proceedings of the IEEE international conference on computer vision, pages 5803–5812, 2017.</i></div>
-<div id=ref1>[2] <i>Antoine Miech, Dimitri Zhukov, Jean-Baptiste Alayrac, Makarand Tapaswi, Ivan Laptev, and Josef Sivic. Howto100m: Learning a text-video embedding by watching hundred million narrated video clips. In Proceedings of the IEEE/CVF International Conference on Computer
+<div id=ref1>[1] <i>Antoine Miech, Dimitri Zhukov, Jean-Baptiste Alayrac, Makarand Tapaswi, Ivan Laptev, and Josef Sivic. HowTo100M: Learning a text-video embedding by watching hundred million narrated video clips. In Proceedings of the IEEE/CVF International Conference on Computer
 Vision, pages 2630–2640, 2019. </i></div>
-<div id=ref3>[3] <i>Sami Abu-El-Haija, Nisarg Kothari, Joonseok Lee, Paul Natsev, George Toderici, Balakrishnan Varadarajan, and Sudheendra Vijayanarasimhan. Youtube-8m: A large-scale video classification benchmark. arXiv preprint arXiv:1609.08675, 2016. </i></div>
-<div id=ref3>[4] <i>Yitian Yuan, Tao Mei, and Wenwu Zhu. To find where you talk: Temporal sentence localization in video with attention based location regression. In Proceedings of the AAAI Conference on Artificial Intelligence, volume 33, pages 9159–9166, 2019.</i></div>
+<div id=ref2>[2] <i>Sami Abu-El-Haija, Nisarg Kothari, Joonseok Lee, Paul Natsev, George Toderici, Balakrishnan Varadarajan, and Sudheendra Vijayanarasimhan. Youtube-8m: A large-scale video classification benchmark. arXiv preprint arXiv:1609.08675, 2016. </i></div>
+<div id=ref3>[3] <i>Yitian Yuan, Tao Mei, and Wenwu Zhu. To find where you talk: Temporal sentence localization in video with attention based location regression. In Proceedings of the AAAI Conference on Artificial Intelligence, volume 33, pages 9159–9166, 2019.</i></div>
 
 
 </main>
