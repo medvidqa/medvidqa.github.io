@@ -114,6 +114,8 @@
 <li><strong>Camera-ready papers due:</strong> <span style="font-weight: bold; color: red;">April 4, 2022</span></li>
 <li><strong>BioNLP workshop @ACL22: </strong><span style="font-weight: bold; color: red;">May 26, 2022</span></li>
 </ul>
+Join our <a href="https://groups.google.com/g/medvidqa2022/">Google Group</a> for important updates! If you have any question, ask in our <a href="https://groups.google.com/g/medvidqa2022/">Google Group</a> or <a href="mailto:deepak.gupta@nih.gov">email</a> us.
+
 </section>
 
 <section id="tasks" style="margin-bottom: 1cm;">
@@ -184,12 +186,12 @@ Given a medical or health-related question and a video, the task aims to locate 
 <ul>
 <li>
     <strong>Training Dataset:</strong> 
-    The training dataset consists of --- videos annotated into one the medical video classes from HowTo100M <a href="#ref1">[1]</a> and YouTube8M <a href="#ref2">[2]</a> datasets.
+    The training dataset consists of 4217 videos annotated into one the medical video classes.
 </li>
 <li>
 
     <strong> Validation Dataset:</strong>
-     The validation dataset consists of − − −− videos. These videos are also annotated into one of the medical video classes from YouTube8M and HowTo100M datasets.
+     The validation dataset consists of 300 videos. These videos are also annotated into one of the medical video classes from YouTube8M and HowTo100M datasets.
 </li>
 
 </ul>
@@ -198,12 +200,12 @@ Given a medical or health-related question and a video, the task aims to locate 
 <ul>
 <li>
     <strong>Training Dataset:</strong> 
-    The training dataset consists of 2351 question and answer timestamps which are formulated from 702 trusted medical instructional videos from various YouTube channels.
+    The training dataset consists of 2710 question and answer timestamps which are formulated from 800 trusted medical instructional videos from various YouTube channels.
 
 </li>
 <li>
     <strong> Validation Dataset:</strong>
-     The validation and test dataset contains 161 questions and answers timestamps created from 50 medical instructional videos.
+     The validation and test dataset contains 145 questions and answers timestamps created from 50 medical instructional videos.
 </li>
 
 </ul>
@@ -219,8 +221,7 @@ and <b>(b)</b> Average macro-level F1 score across all the classes.
 
 <h5>MVAL Evaluation</h5>
 <div><p>
-We will evaluate the results using <b>(a)</b> Intersection over Union (IoU), and <b>(b)</b> mIoU which is the average IoU over all testing sample. Following <a href="#ref3">[3]</a>, we will use “R@n, IoU = &mu;”, which denotes the percentage of questions for which, out of the top-n retrieved temporal segments, at least one predicted temporal segment intersects the ground truth
-temporal segment for longer than µ. We will use n=1 and &mu; &isin; {0.3, 0.5, 0.7} to evalaute the results.</p></div>
+We will evaluate the results using <b>(a)</b> Intersection over Union (IoU), and <b>(b)</b> mIoU which is the average IoU over all testing sample. Following <a href="#ref3">[3]</a>, we will use “R@n, IoU = &mu;”, which denotes the percentage of questions for which, out of the top-n retrieved temporal segments, at least one predicted temporal segment intersects the ground truth temporal segment for longer than &mu;. We will use n=1 and &mu; &isin; {0.3, 0.5, 0.7} to evalaute the results.</p></div>
 </section>
 
 <section id="organizers"></section>
