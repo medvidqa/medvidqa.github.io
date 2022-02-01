@@ -87,16 +87,17 @@
 </div>
 
 <div>
-<p>Consider a medical question, “<i>How to place a tourniquet in case of fingertip avulsions? ”</i>, the textual answer to this question will be hard to understand and act upon without visual aid. In order to provide visual aid, first, we need to identify the relevant video, which is medical and instructional in nature. Once we find a relevant video, it is often the case that the entire video can not be considered as the answer to the given question. Instead, we want to refer to a particular temporal segment, or moment, from the video, where the answer is being shown or the explanation is illustrated in the video. We believe medical videos may provide the best possible answers to many first aid, medical emergency, and medical education questions. 
+<p>Consider a medical question, “<i>How to place a tourniquet in case of fingertip avulsions? ”</i>, the textual answer to this question will be hard to understand and act upon without visual aid. In order to provide visual aid, first, we need to identify the relevant video, which is medical and instructional in nature. Once we find a relevant video, it is often the case that the entire video can not be considered as the answer to the given question. Instead, we want to refer to a particular temporal segment, or moment, from the video, where the answer is being shown or the explanation is illustrated in the video<a href="#ref1">[1]</a>. We believe medical videos may provide the best possible answers to many first aid, medical emergency, and medical education questions. 
 </p>
-
 </div>
+
 </section>
 <section id="news" style="margin-bottom: 1cm;">
 <h2>News</h2>
 <ul>
 <li>January 10, 2022: Introducing the MedVidQA 2022 challenge.</li>
 <li>January 13, 2022: The CodaLab platform is accepting the submission for both the Tasks.</li>
+<li>February 1, 2022: <a href="https://arxiv.org/pdf/2201.12888.pdf">Data desciption paper</a> has been released.</li>
 
 </ul>
 </section>
@@ -192,6 +193,8 @@ Given a medical or health-related question and a video, the task aims to locate 
   <div>
 <center><h5>Sample question and its visual answer from the video. </h5></center>
 </div>
+
+For more details, please see our <a href="https://arxiv.org/pdf/2201.12888.pdf">data desciption paper></a>.
 </section>
 
 
@@ -206,7 +209,7 @@ Given a medical or health-related question and a video, the task aims to locate 
 <li>
 
     <strong> Validation Dataset:</strong>
-     The validation dataset consists of 300 videos. These videos are also annotated into one of the medical video classes from YouTube8M and HowTo100M datasets.
+     The validation dataset consists of 300 videos. These videos are also annotated into one of the medical video classes from YouTube8M<a href="#ref2">[2]</a> and HowTo100M<a href="#ref3">[3]</a> datasets.
 </li>
 
 </ul>
@@ -236,7 +239,7 @@ and <b>(b)</b> Average macro-level F1 score across all the classes.
 
 <h5>MVAL Evaluation</h5>
 <div><p>
-We will evaluate the results using <b>(a)</b> Intersection over Union (IoU), and <b>(b)</b> mIoU which is the average IoU over all testing sample. Following <a href="#ref3">[3]</a>, we will use “R@n, IoU = &mu;”, which denotes the percentage of questions for which, out of the top-n retrieved temporal segments, at least one predicted temporal segment intersects the ground truth temporal segment for longer than &mu;. We will use n=1 and &mu; &isin; {0.3, 0.5, 0.7} to evalaute the results.</p></div>
+We will evaluate the results using <b>(a)</b> Intersection over Union (IoU), and <b>(b)</b> mIoU which is the average IoU over all testing sample. Following <a href="#ref4">[4]</a>, we will use “R@n, IoU = &mu;”, which denotes the percentage of questions for which, out of the top-n retrieved temporal segments, at least one predicted temporal segment intersects the ground truth temporal segment for longer than &mu;. We will use n=1 and &mu; &isin; {0.3, 0.5, 0.7} to evalaute the results.</p></div>
 </section>
 
 <section id="organizers"></section>
@@ -261,10 +264,12 @@ We will evaluate the results using <b>(a)</b> Intersection over Union (IoU), and
 
 
 <h2>References</h2>
-<div id=ref1>[1] <i>Antoine Miech, Dimitri Zhukov, Jean-Baptiste Alayrac, Makarand Tapaswi, Ivan Laptev, and Josef Sivic. HowTo100M: Learning a text-video embedding by watching hundred million narrated video clips. In Proceedings of the IEEE/CVF International Conference on Computer
-Vision, pages 2630–2640, 2019. </i></div>
+<div id=ref1>[1] <i>Deepak Gupta, Kush Attal, and Dina Demner-Fushman. A Dataset for Medical Instructional Video Classification and Question Answering
+. arXiv preprint arXiv:2201.12888, 2022. </i></div>
 <div id=ref2>[2] <i>Sami Abu-El-Haija, Nisarg Kothari, Joonseok Lee, Paul Natsev, George Toderici, Balakrishnan Varadarajan, and Sudheendra Vijayanarasimhan. Youtube-8m: A large-scale video classification benchmark. arXiv preprint arXiv:1609.08675, 2016. </i></div>
-<div id=ref3>[3] <i>Yitian Yuan, Tao Mei, and Wenwu Zhu. To find where you talk: Temporal sentence localization in video with attention based location regression. In Proceedings of the AAAI Conference on Artificial Intelligence, volume 33, pages 9159–9166, 2019.</i></div>
+<div id=ref3>[3] <i>Antoine Miech, Dimitri Zhukov, Jean-Baptiste Alayrac, Makarand Tapaswi, Ivan Laptev, and Josef Sivic. HowTo100M: Learning a text-video embedding by watching hundred million narrated video clips. In Proceedings of the IEEE/CVF International Conference on Computer
+Vision, pages 2630–2640, 2019. </i></div>
+<div id=ref4>[4] <i>Yitian Yuan, Tao Mei, and Wenwu Zhu. To find where you talk: Temporal sentence localization in video with attention based location regression. In Proceedings of the AAAI Conference on Artificial Intelligence, volume 33, pages 9159–9166, 2019.</i></div>
 
 
 </main>
