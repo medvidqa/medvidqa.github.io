@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MedVidQA 2024</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- style -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/datatables.min.css">
+    <link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4-4.1.1/jszip-2.5.0/dt-1.10.20/b-1.6.1/b-html5-1.6.1/b-print-1.6.1/cr-1.5.2/r-2.2.3/datatables.min.css"/>
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- javascript libraries -->
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="js/jquery.latest.min.js"></script>
+    <script type="text/javascript" src="js/jquery.csv.min.js"></script>
+    <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+    <script type="text/javascript" src="js/datatables.min.js"></script>
+
+    <!-- datatables deps -->
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs4-4.1.1/jszip-2.5.0/dt-1.10.20/b-1.6.1/b-html5-1.6.1/b-print-1.6.1/cr-1.5.2/r-2.2.3/datatables.min.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-30FQTDJR3S"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-30FQTDJR3S');
+</script>
+    <!-- Simple js to show/hide a div element -->
+    <script>
+        function myFunction(el) {
+            var x = document.getElementById(el);
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+
+
+    
+</head>
+
+<body id="_index">
+
+<nav>
+<section style="text-align: right;">
+    <span class="home">
+        <a href="index.html"><strong>Home</strong></a>
+        <a href="#idates"><strong>Important Dates</strong></a>
+        <a href="#tasks"><strong>Tasks</strong></a>
+        <a href="#datasets"><strong>Datasets</strong></a>
+        <a href="#eval"><strong>Evaluation</strong></a>
+  <a href="#organizers"><strong>Organizers</strong></a>
+    </span>
+</section>
+</nav>
+
+    <div style="height: 325px; width: 100%; overflow:hidden;   position: relative; text-align: center;  font-size: 180%;  
+  color: Black;">
+        <img src="img/background.png" style="width: 100%; height: 325px;"/>
+         <div class="centered">
+         <h1 style="font-size:2vw">TRECVID Task on Medical Video Question Answering</h1>
+        <h1 style="font-size:3vw">MedVidQA 2024</h1>
+
+     </div>
+    </div>
+
+
+
+<main>
+    <section style="margin-top: 1cm">
+<h2>Introduction</h2>
+
+
+<div>
+<p>
+   The recent surge in the availability of online videos has changed the way of acquiring information and knowledge. Many people prefer instructional videos to teach or learn how to accomplish a particular task in an effective and efficient manner with a series of step-by-step procedures. Similarly, medical instructional videos are more suitable and beneficial for delivering key information through visual and verbal communication to consumers' healthcare questions that demand instruction. We aim to extract the visual information from the video corpus for consumers' first aid, medical emergency, and medical educational questions. Extracting the relevant information from the video corpus requires relevant video retrieval, moment localization, video summarization, and captioning skills. Toward this, the TRECVID task, Medical Video Question Answering, focuses on developing systems capable of understanding medical videos and providing visual answers (from single and multiple videos) and instructional step captions to answer natural language questions. Emphasizing the importance of multimodal capabilities, the task requires systems to generate instructional questions and captions based on medical video content. Following the <a href="./index-2023.html">MedVidQA 2023</a>, TRECVID 2024 expanded the tasks and introduced a new track considering language-video understanding and generation. This track is comprised of four main tasks: Video Corpus Visual Answer Localization (VCVAL), Query-Focused Multi-video Summarization (QFMVS), Query-Focused Instructional Step Captioning (QFISC), and Medical Instructional Question Generation (MIQG).
+
+</p>
+
+</div>
+
+
+
+</section>
+<section id="news" style="margin-bottom: 1cm;">
+<h2>News</h2>
+<ul>
+
+
+<li>February 12, 2024: Introducing the MedVidQA 2024 challenge.</li>
+
+
+</ul>
+</section>
+
+<section id="idates" style="margin-bottom: 1cm;">
+<h2>Important Dates</h2>
+<ul>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-fymr{border-color:inherit;font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-7btt{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+@media screen and (max-width: 767px) {.tg {width: auto !important;}.tg col {width: auto !important;}.tg-wrap {overflow-x: auto;-webkit-overflow-scrolling: touch;}}</style>
+<div class="tg-wrap"><table class="tg">
+<thead>
+  <tr>
+    <th class="tg-fymr">Task</th>
+    <th class="tg-7btt">Test Set Release</th>
+    <th class="tg-fymr">Submission<br>Deadline</th>
+    <th class="tg-fymr">Official<br>Results</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky">Task A</td>
+    <td class="tg-0pky">June 7</td>
+    <td class="tg-0pky">August 9 </td>
+    <td class="tg-0pky">September 8 </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Task B</td>
+    <td class="tg-0pky">September 2 </td>
+    <td class="tg-0pky">September 16 </td>
+    <td class="tg-0pky">October 11</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Task C</td>
+    <td class="tg-0pky">September 2 </td>
+    <td class="tg-0pky">September 16 </td>
+    <td class="tg-0pky">October 11</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Task D</td>
+    <td class="tg-0pky">July 9</td>
+    <td class="tg-0pky">September 16</td>
+    <td class="tg-0pky">October 8</td>
+  </tr>
+</tbody>
+</table></div>
+</ul>
+Join our <a href="https://groups.google.com/g/trecvid-medvidqa2024">Google Group</a> for important updates! If you have any questions, ask in our <a href="https://groups.google.com/g/trecvid-medvidqa2024">Google Group</a> or <a href="mailto:deepak.gupta@nih.gov">email</a> us.
+
+</section>
+
+
+<section id="registration" style="margin-bottom: 1cm;">
+<h2>Registration and Submission</h2>
+
+<ul>
+<li> Participants are required to complete their registration by submitting the TRECVID 2024 Application Form</a>. Registered teams will be added to TRECVID 2024's mailing list for future communication.
+</li>
+
+<li> Submission: TBD</li>
+
+</ul>
+</section>
+
+
+<section id="tasks" style="margin-bottom: 1cm;">
+<h2>Tasks</h2>
+<ul>
+	<li>
+<h3>Task A: Video Corpus Visual Answer Localization (VCVAL)</h3>
+Given a medical query and a collection of videos, the task aims to retrieve the appropriate video from the video collection and then locate the temporal segments (start and end timestamps) in the video where the answer to the medical query is being shown, or the explanation is illustrated in the video.
+
+<br><br>
+ <img src="img/vcval.PNG" style="width: 100%;object-fit: cover;"/>
+  <div>
+<center><h5><br>Schematic workflow of the video corpus visual answer localization task. </h5></center>
+</div>
+</li>
+<div>
+The VCVAL task consists of two subtasks: <b>(a)</b> Video Retrieval, and <b>(b)</b> Temporal Segment Prediction.
+</div>
+<br><br>
+<li>
+
+
+<h3>Task B: Query-Focused Multi-video Summarization (QFMVS)</h3>
+Given a medical query and a collection of videos, this task aims to create a short video summary from videos that answer a specific health-related query. The proposed QFMVS task can be considered as the extension of the VCVAL task, where the system needs to locate visual answer segments from multiple relevant videos. The QFMVS demands summarizing these answer segments by generating a short synopsis, considering the most informative and important parts. The produced summary is usually composed of video fragments that have been stitched in chronological order to form a shorter video. 
+
+</li>
+<li>
+<h3>Task C: Query-Focused Instructional Step Captioning (QFISC)</h3>
+Given a medical query and a video, this task aims to generate step-by-step textual summaries of the visual instructional segment that can be considered as the answer to the medical query. The proposed QFISC task can be considered an extension of the visual answer localization task, where the system needs to locate a series of instructional segments that serve as the answer to the query. The QFISC demands identifying the instructional step boundaries and generating a step caption for every step. This task comes under multimodal generation, where the system has to consider the video (visual) and subtitle (language) modality to generate the natural language caption.
+</li>
+
+<li>
+<h3>Task D: Medical Instructional Question Generation (MIQG)</h3>
+<div><p>
+Given a video segment and its subtitle, the task is to generate the instructional question for which the given video segment is the visual answer. This task comes under multimodal generation, where the system has to consider the video (visual) and subtitle (language) modalities to generate the natural language question.</p></div>
+<br>
+ <img src="img/miqg.PNG" style="width: 100%;object-fit: cover;"/>
+  <div>
+<center><h5><br> Schematic workflow of the medical instructional question generation task. </h5></center>
+</div>
+</li>
+<br><br>
+</ul>
+</section>
+
+
+<section id="datasets" style="margin-bottom: 1cm;">
+<h2>Datasets</h2>
+<ul>
+<li>
+<h5>Task A</h5>
+<ul>
+<li>
+    <strong>Training and Validation Datasets:</strong> 
+    
+    		MedVidQA collections <a href="#ref1">[1]</a> consisting of 3,010 human-annotated instructional questions and visual answers from 900 health-related videos.
+    </ol>
+
+</li>
+
+</ul>
+</li>
+
+<li>
+<h5>Task B</h5>
+<ul>
+<li>
+    <strong>Training and Validation Datasets:</strong> 
+    
+           Open domain MVS1K dataset <a href="#ref2">[2]</a> to train the system. MVS1K comprises about 1,000 videos from 10 queries and their video tags, manual annotations, and associated web images.
+    </ol>
+
+</li>
+
+</ul>
+</li>
+
+<li>
+<h5>Task C</h5>
+<ul>
+<li>
+    <strong>Training and Validation Datasets:</strong> 
+    
+          Open domain HIREST dataset <a href="#ref3">[3]</a> to train the system
+for Task C. HIREST comprises 3.4K text-video pairs sourced from an instructional video
+dataset. Among these, 1.1K videos are annotated with moment spans pertinent to text
+queries. Each moment is further dissected into key instructional steps, complete with captions
+and timestamps, resulting in a total of 8.6K step captions.
+    </ol>
+
+</li>
+</ul>
+</li>
+
+
+
+
+<li>
+<h5>Task D</h5>
+<ul>
+<li>
+    <strong>Training and Validation Datasets:</strong> 
+    MedVidQA collections <a href="#ref1">[1]</a> consisting of 3,010 human-annotated instructional questions and visual answers from 900 health-related videos.
+
+</li>
+
+
+</ul>
+</li>
+</ul>
+We will utilize the video corpus of medical instructional videos of size 12, 657 for Tasks A, B, and C. The test queries of size 50 will be released, which will be used as a test set for tasks A, B, and C. Another set of visual segments of size 50 will be released, which will be used as a test set for task D.
+</section>
+
+
+<section id="eval" style="margin-bottom: 1cm;">
+<h2>Evaluation Metrics</h2>
+<ul>
+<li>
+<h5>TBD</h5>
+
+
+</section>
+
+<section id="organizers"></section>
+<h2>Organizers</h2>
+<p>
+<a href="https://lhncbc.nlm.nih.gov/LHC-personnel/staff/DeepakGupta.html">
+<div class="item">
+    <img class="headshot" src="img/organizers/deepak.jpeg"/>
+    <span class="name">Deepak Gupta</span>
+    <span class="affiliation">NLM, NIH</span>
+</div>
+</a>
+<a href="https://www.nlm.nih.gov/research/researchstaff/DemnerFushmanDina.html">
+<div class="item">
+    <img class="headshot" src="img/organizers/DinaDemnerFushman.jpg"/>
+    <span class="name">Dina Demner-Fushman</span>
+    <span class="affiliation">NLM, NIH</span>
+</div>
+</a>
+
+</p>
+
+
+<h2>References</h2>
+<div id=ref1>[1] <i>Deepak Gupta, Kush Attal, and Dina Demner-Fushman. A Dataset for Medical Instructional Video Classification and Question Answering, Sci Data 10, 158 (2023) </i></div>
+<div id=ref2>[2] <i>Zhong Ji, Yaru Ma, Yanwei Pang, and Xuelong Li. Query-aware sparse coding for web multi-
+video summarization. Information Sciences, 478:152–166, 2019.</i></div>
+<div id=ref3>[3] <i>Abhay Zala, Jaemin Cho, Satwik Kottur, Xilun Chen, Barlas Oguz, Yashar Mehdad, and
+Mohit Bansal. Hierarchical video-moment retrieval and step-captioning. In Proceedings of the
+IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 23056–23065,
+2023.</i></div>
+
+
+</main>
+
+<footer>
+<section>
+<p>&copy; MedVidQA 2024 Organizers; Credit: <a href="https://www.cs.ubc.ca/research/image-matching-challenge/current/" style="color: black;">Image Matching Challenge 2021</a> </p>
+<p>
+    <a href="mailto: trecvid-medvidqa2024@googlegroups.com">E-mail</a>
+</p>
+</section>
+</footer>
+
+</body>
+</html>
