@@ -83,7 +83,7 @@
 
 <div>
 <p>
-   The recent surge in the availability of online videos has changed the way of acquiring information and knowledge. Many people prefer instructional videos to teach or learn how to accomplish a particular task in an effective and efficient manner with a series of step-by-step procedures. Similarly, medical instructional videos are more suitable and beneficial for delivering key information through visual and verbal communication to consumers' healthcare questions that demand instruction. We aim to extract the visual information from the video corpus for consumers' first aid, medical emergency, and medical educational questions. Extracting the relevant information from the video corpus requires relevant video retrieval, moment localization, video summarization, and captioning skills. Toward this, the TRECVID task, Medical Video Question Answering, focuses on developing systems capable of understanding medical videos and providing visual answers (from single and multiple videos) and instructional step captions to answer natural language questions. Emphasizing the importance of multimodal capabilities, the task requires systems to generate instructional questions and captions based on medical video content. Following the <a href="./index-2023.html">MedVidQA 2023</a>, TRECVID 2024 expanded the tasks considering language-video understanding and generation. This track is comprised of four main tasks: Video Corpus Visual Answer Localization (VCVAL), Query-Focused Multi-video Summarization (QFMVS), Query-Focused Instructional Step Captioning (QFISC), and Medical Instructional Question Generation (MIQG).
+   The recent surge in the availability of online videos has changed the way of acquiring information and knowledge. Many people prefer instructional videos to teach or learn how to accomplish a particular task in an effective and efficient manner with a series of step-by-step procedures. Similarly, medical instructional videos are more suitable and beneficial for delivering key information through visual and verbal communication to consumers' healthcare questions that demand instruction. We aim to extract the visual information from the video corpus for consumers' first aid, medical emergency, and medical educational questions. Extracting the relevant information from the video corpus requires relevant video retrieval, moment localization, video summarization, and captioning skills. Toward this, the TRECVID task, Medical Video Question Answering, focuses on developing systems capable of understanding medical videos and providing visual answers (from single and multiple videos) and instructional step captions to answer natural language questions. Emphasizing the importance of multimodal capabilities, the task requires systems to generate instructional questions and captions based on medical video content. Following the <a href="./index-2023.html">MedVidQA 2023</a>, TRECVID 2024 expanded the tasks considering language-video understanding and generation. This track is comprised of two main tasks: Video Corpus Visual Answer Localization (VCVAL) and Query-Focused Instructional Step Captioning (QFISC).
 
 </p>
 
@@ -132,24 +132,14 @@
     <td class="tg-0pky">August 2 </td>
     <td class="tg-0pky">September 8 </td>
   </tr>
+  
   <tr>
     <td class="tg-0pky">Task B</td>
     <td class="tg-0pky">September 2 </td>
     <td class="tg-0pky">September 16 </td>
     <td class="tg-0pky">October 11</td>
   </tr>
-  <tr>
-    <td class="tg-0pky">Task C</td>
-    <td class="tg-0pky">September 2 </td>
-    <td class="tg-0pky">September 16 </td>
-    <td class="tg-0pky">October 11</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">Task D</td>
-    <td class="tg-0pky">July 9</td>
-    <td class="tg-0pky">September 16</td>
-    <td class="tg-0pky">October 8</td>
-  </tr>
+  
 </tbody>
 </table></div>
 </ul>
@@ -188,29 +178,13 @@ Given a medical query and a collection of videos, the task aims to retrieve the 
 The VCVAL task consists of two subtasks: <b>(a)</b> Video Retrieval, and <b>(b)</b> Temporal Segment Prediction.
 </div>
 <br><br>
+
 <li>
-
-
-<h3>Task B: Query-Focused Multi-video Summarization (QFMVS)</h3>
-Given a medical query and a collection of videos, this task aims to create a short video summary from videos that answer a specific health-related query. The proposed QFMVS task can be considered as the extension of the VCVAL task, where the system needs to locate visual answer segments from multiple relevant videos. The QFMVS demands summarizing these answer segments by generating a short synopsis, considering the most informative and important parts. The produced summary is usually composed of video fragments that have been stitched in chronological order to form a shorter video. 
-
-</li>
-<li>
-<h3>Task C: Query-Focused Instructional Step Captioning (QFISC)</h3>
+<h3>Task B: Query-Focused Instructional Step Captioning (QFISC)</h3>
 Given a medical query and a video, this task aims to generate step-by-step textual summaries of the visual instructional segment that can be considered as the answer to the medical query. The proposed QFISC task can be considered an extension of the visual answer localization task, where the system needs to locate a series of instructional segments that serve as the answer to the query. The QFISC demands identifying the instructional step boundaries and generating a step caption for every step. This task comes under multimodal generation, where the system has to consider the video (visual) and subtitle (language) modality to generate the natural language caption.
 </li>
 
-<li>
-<h3>Task D: Medical Instructional Question Generation (MIQG)</h3>
-<div><p>
-Given a video segment and its subtitle, the task is to generate the instructional question for which the given video segment is the visual answer. This task comes under multimodal generation, where the system has to consider the video (visual) and subtitle (language) modalities to generate the natural language question.</p></div>
-<br>
- <img src="img/miqg.PNG" style="width: 100%;object-fit: cover;"/>
-  <div>
-<center><h5><br> Schematic workflow of the medical instructional question generation task. </h5></center>
-</div>
-</li>
-<br><br>
+
 </ul>
 </section>
 
@@ -232,22 +206,9 @@ Given a video segment and its subtitle, the task is to generate the instructiona
 </ul>
 </li>
 
+
 <li>
 <h5>Task B</h5>
-<ul>
-<li>
-    <strong>Training and Validation Datasets:</strong> 
-    
-           Open domain MVS1K dataset <a href="#ref2">[2]</a> to train the system. MVS1K comprises about 1,000 videos from 10 queries and their video tags, manual annotations, and associated web images.
-    </ol>
-
-</li>
-
-</ul>
-</li>
-
-<li>
-<h5>Task C</h5>
 <ul>
 <li>
     <strong>Training and Validation Datasets:</strong> 
@@ -266,20 +227,10 @@ and timestamps, resulting in a total of 8.6K step captions.
 
 
 
-<li>
-<h5>Task D</h5>
-<ul>
-<li>
-    <strong>Training and Validation Datasets:</strong> 
-    MedVidQA collections <a href="#ref1">[1]</a> consisting of 3,010 human-annotated instructional questions and visual answers from 900 health-related videos.
-
-</li>
-
-
 </ul>
 </li>
 </ul>
-We will utilize the video corpus of medical instructional videos of size 12, 657 for Tasks A, B, and C. The test queries of size 50 will be released, which will be used as a test set for tasks A, B, and C. Another set of visual segments of size 50 will be released, which will be used as a test set for task D.
+
 </section>
 
 
