@@ -264,7 +264,7 @@ We plan to evaluate the performance of the step captioning task on two fronts: <
 
 <ol type="a">
 
-   <li> With the help of predicted timestamps and sentence level similarity (ROUGE-L) of the step, we will align a generated step to one of the ground truth steps. Towards this, we define the following:</li>
+   <li> With the help of predicted timestamps and sentence-level similarity (ROUGE-L) of the step, we will align a predicted step to one of the ground truth steps. Once a predicted or ground truth step is matched, it is no longer considered, so there will be only one-to-one matching.  Towards this, we define the following:</li>
     <ul>
         <li> TP (True Positives): Represents the count of predicted steps that are present in the ground truth steps.</li>
   <li> FP (False Positives) :
