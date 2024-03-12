@@ -238,7 +238,62 @@ and timestamps, resulting in a total of 8.6K step captions.
 <h2>Evaluation Metrics</h2>
 <ul>
 <li>
-<h5>TBD</h5>
+<h5>Task A</h5>
+<ul>
+<li>
+   
+   The VCVAL task consists of two sub-tasks: video retrieval (VR) and visual answer localization (VAL). We will evalaute the performance of the video retrieval system in terms of Mean Average Precision (MAP), Recall@k, Precision@k, and nDCG metrics with k={5, 10}. We will follow the <a href=https://github.com/usnistgov/trec_eval>trec_eval</a> evaluation library to report the performance of participating systems. For the VAL task, following MedVidQA 2023, we will use Mean Intersection over Union (mIoU) and IoU =0.3, IoU=0.5 and IoU=0.7 as the evaluation metrics. 
+
+</li>
+
+</ul>
+</li>
+
+
+<li>
+<h5>Task B</h5>
+<ul>
+<li>
+   
+We plan to evaluate the performance of the step captioning task on two fronts: <b>(1)</b> how close the system-generated step caption is to the ground truth step captions, and <b>(2)</b> how well the predicted step segment aligns with the ground truth step segment. 
+<br>
+
+<ol>
+    <br>
+<li>We will measure the closeness in two ways:  
+
+<ol type="a">
+
+   <li> With the help of predicted timestamps and sentence level similarity (ROUGE-L) of the step, we will align a generated step to one of the ground truth steps. Towards this, we define the following:</li>
+    <ul>
+        <li> TP (True Positives): Represents the count of predicted steps that are present in the ground truth steps.</li>
+  <li> FP (False Positives) :
+ Represents the count of predicted steps that are not present in the ground truth steps. </li>
+
+<li> FN (False Negatives): 
+  Represents the count of ground truth steps that are not present in the predicted steps. </li>
+</ul>
+ Following this, we compute the precision, recall, and f-score. 
+    <li>We will use the n-gram matching metrics: CIDEr <a href="#ref4">[4]</a>, and SPICE <a href="#ref5">[5]</a>. Additionally, we plan to use sentence-level embedding-based metrics: BERTScore <a href="#ref6">[6]</a> as they capture the semantic similarity between the generated and ground truth captions.  </li>
+
+</ol>
+</li>
+<br>
+<li>To compute the alignment between the predicted step segments and the ground truth step segments, we will use the intersection over union (IoU) metric. For a given step, IoU is computed as the ratio of the common segment to the union between the predicted and ground-truth segments. It ranges from 0 to 1. For the shorter step, where the step segment lasts, say, only 1-2 seconds, if the system-generated step segment does not match with the ground-truth segment, the system may end up with IoU=0. To deal with such a situation, we will use relaxed IoU, where we will extend the segments by &lambda; before computing the IoU. We will compute the mean of the IoU for all the segments in the test set.
+</li>
+</ol>
+
+
+</li>
+</ul>
+</li>
+
+
+
+
+</ul>
+</li>
+</ul>
 
 
 </section>
@@ -273,6 +328,12 @@ Mohit Bansal. Hierarchical video-moment retrieval and step-captioning. In Procee
 IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 23056–23065,
 2023.</i></div>
 
+<div id=ref4>[4] <i>Vedantam, Ramakrishna, C. Lawrence Zitnick, and Devi Parikh. "Cider: Consensus-based image description evaluation." In Proceedings of the IEEE conference on computer vision and pattern recognition, pp. 4566-4575. 2015.</i></div>
+
+<div id=ref5>[5] <i>Anderson, Peter, Basura Fernando, Mark Johnson, and Stephen Gould. "Spice: Semantic propositional image caption evaluation." In Computer Vision–ECCV 2016: 14th European Conference, Amsterdam, The Netherlands, October 11-14, 2016, Proceedings, Part V 14, pp. 382-398. Springer International Publishing, 2016.</i></div>
+
+
+<div id=ref6>[6] <i>Zhang, Tianyi, Varsha Kishore, Felix Wu, Kilian Q. Weinberger, and Yoav Artzi. "Bertscore: Evaluating text generation with bert." International Conference on Learning Representations (2020).</i></div>
 
 </main>
 
